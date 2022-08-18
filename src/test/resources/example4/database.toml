@@ -1,0 +1,4 @@
+# 3306 or 3307 ! nothing either is accepted [COPIED FROM A JAR TO OUTSIDE A JAR]!
+port = 3306
+# The day when the player will be able to go inside the Nether
+url = "localhost"
