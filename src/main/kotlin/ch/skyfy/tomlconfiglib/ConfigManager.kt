@@ -37,13 +37,13 @@ object ConfigManager {
             configData.`data` = get(configData.relativeFilePath, shouldThrowRuntimeException = false)
         } catch (e: Exception) {
             e.printStackTrace()
+            LOGGER.error("The configuration cannot be reloaded due to errors")
             return false
         }
         return true
     }
 
     /**
-     *
      * This method try to deserialize a TOML file to an object of type [DATA].
      * If the TOML file is not found, a new object will be created provided by the type [DEFAULT]
      * and a new TOML file will be created
@@ -68,7 +68,6 @@ object ConfigManager {
             throw RuntimeException(e)
         }
     }
-
 
     /**
      * This method try to deserialize a TOML file to an object of type [DATA]
@@ -148,7 +147,7 @@ object ConfigManager {
         configData: ConfigData<DATA>,
         toml: Toml = ConfigManager.toml
     ) {
-        if (!configData.data.confirmValidate(shouldThrowRuntimeException = false)) {
+        if (!configData.`data`.confirmValidate(shouldThrowRuntimeException = false)) {
             LOGGER.warn("The data you tried to save has not been saved, because something is not valid")
             return
         }

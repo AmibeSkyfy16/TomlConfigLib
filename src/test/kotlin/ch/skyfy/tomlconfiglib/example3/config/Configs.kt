@@ -1,4 +1,4 @@
-package ch.skyfy.jsonconfig.example3.config
+package ch.skyfy.tomlconfiglib.example3.config
 
 import ch.skyfy.tomlconfiglib.ConfigData
 import java.nio.file.Paths

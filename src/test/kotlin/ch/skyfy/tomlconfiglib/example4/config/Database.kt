@@ -1,4 +1,4 @@
-package ch.skyfy.jsonconfig.example4.config
+package ch.skyfy.tomlconfiglib.example4.config
 
 import ch.skyfy.tomlconfiglib.Defaultable
 import ch.skyfy.tomlconfiglib.Validatable

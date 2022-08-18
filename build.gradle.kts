@@ -1,3 +1,4 @@
+import org.jetbrains.kotlin.gradle.plugin.mpp.pm20.archivesName
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import java.util.Properties
 
@@ -9,9 +10,10 @@ plugins {
     idea
 }
 
-base{
-    group = "ch.skyfy.tomlconfiglib"
-    version = "1.0.0"
+base {
+    archivesName.set(properties["archives_name"].toString())
+    group = property("maven_group")!!
+    version = property("version")!!
 }
 
 repositories {
@@ -25,7 +27,7 @@ dependencies {
     implementation("io.github.microutils:kotlin-logging-jvm:2.1.23")
     implementation("org.slf4j:slf4j-api:1.7.36")
 
-    testImplementation("ch.qos.logback:logback-classic:1.3.0-alpha16")
+    testImplementation("ch.qos.logback:logback-classic:1.3.0-beta0")
     testImplementation("org.jetbrains.kotlin:kotlin-test:1.7.10")
 }
 
@@ -84,13 +86,13 @@ publishing {
     publications {
         create<MavenPublication>("maven") {
             groupId = project.group.toString()
-            artifactId = "toml-config-lib"
+            artifactId = archivesName
             version = project.version.toString()
 
             from(components["java"])
 
             pom {
-                name.set("toml-config-lib")
+                name.set(archivesName)
                 description.set("a tiny TOML config library used for minecraft mod dev")
 
                 licenses {

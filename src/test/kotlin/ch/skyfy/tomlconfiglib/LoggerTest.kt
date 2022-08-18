@@ -1,4 +1,4 @@
-package ch.skyfy.jsonconfig
+package ch.skyfy.tomlconfiglib
 
 import ch.skyfy.tomlconfiglib.ConfigManager.LOGGER
 import kotlin.test.Test

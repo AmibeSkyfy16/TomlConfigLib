@@ -1,9 +1,9 @@
-package ch.skyfy.jsonconfig.example2
+package ch.skyfy.tomlconfiglib.example2
 
-import ch.skyfy.jsonconfig.example2.config.Configs
-import ch.skyfy.jsonconfig.example2.config.Home
-import ch.skyfy.jsonconfig.example2.config.Player
-import ch.skyfy.jsonconfig.example2.config.PlayersHomesConfig
+import ch.skyfy.tomlconfiglib.example2.config.Configs
+import ch.skyfy.tomlconfiglib.example2.config.Home
+import ch.skyfy.tomlconfiglib.example2.config.Player
+import ch.skyfy.tomlconfiglib.example2.config.PlayersHomesConfig
 import ch.skyfy.tomlconfiglib.ConfigManager
 import kotlin.test.Test
 
