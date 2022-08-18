@@ -19,7 +19,7 @@ repositories {
 }
 
 dependencies {
-    implementation("ch.skyfy.jsonconfig:json-config:2.1")!!
+    implementation("ch.skyfy.tomlconfiglib:toml-config-lib:1.0.0")!!
 }
 ```
 
