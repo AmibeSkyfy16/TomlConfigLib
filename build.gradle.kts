@@ -22,7 +22,7 @@ repositories {
 
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect:1.7.10")
-    implementation("net.peanuuutz:tomlkt:0.1.7")
+    api("net.peanuuutz:tomlkt:0.1.7")
 
     implementation("io.github.microutils:kotlin-logging-jvm:2.1.23")
     implementation("org.slf4j:slf4j-api:1.7.36")
@@ -101,7 +101,6 @@ publishing {
                         url.set("https://opensource.org/licenses/MIT")
                     }
                 }
-
             }
         }
     }
