@@ -11,7 +11,7 @@
 
 ```
 plugins {
-    id("org.jetbrains.kotlin.plugin.serialization") version "1.7.22" // Use for annotation like @kotlinx.serialization.Serializable
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.8.0" // Use for annotation like @kotlinx.serialization.Serializable
 }
 
 repositories {
@@ -19,7 +19,7 @@ repositories {
 }
 
 dependencies {
-    implementation("ch.skyfy.tomlconfiglib:toml-config-lib:1.0.1")!!
+    implementation("ch.skyfy.tomlconfiglib:toml-config-lib:1.0.2")!!
 }
 ```
 
