@@ -2,8 +2,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import java.util.Properties
 
 plugins {
-    id("org.jetbrains.kotlin.jvm") version "1.8.0"
-    id("org.jetbrains.kotlin.plugin.serialization") version "1.8.0"
+    id("org.jetbrains.kotlin.jvm") version "1.8.20"
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.8.20"
     id("java-library")
     `maven-publish`
     idea
@@ -20,14 +20,14 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-reflect:1.8.0")
-    api("net.peanuuutz:tomlkt:0.1.7")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:1.8.20")
+    api("net.peanuuutz:tomlkt:0.1.8")
 
-    implementation("io.github.microutils:kotlin-logging-jvm:3.0.4")
-    implementation("org.slf4j:slf4j-api:2.0.5")
+    implementation("io.github.microutils:kotlin-logging-jvm:3.0.5")
+    implementation("org.slf4j:slf4j-api:2.0.7")
 
-    testImplementation("ch.qos.logback:logback-classic:1.4.5")
-    testImplementation("org.jetbrains.kotlin:kotlin-test:1.8.0")
+    testImplementation("ch.qos.logback:logback-classic:1.4.6")
+    testImplementation("org.jetbrains.kotlin:kotlin-test:1.8.20")
 }
 
 tasks {
