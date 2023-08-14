@@ -2,8 +2,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import java.util.Properties
 
 plugins {
-    id("org.jetbrains.kotlin.jvm") version "1.8.20"
-    id("org.jetbrains.kotlin.plugin.serialization") version "1.8.20"
+    id("org.jetbrains.kotlin.jvm") version "1.8.22"
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.8.22"
     id("java-library")
     `maven-publish`
     idea
@@ -20,14 +20,14 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-reflect:1.8.20")
-    api("net.peanuuutz:tomlkt:0.1.8")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:1.8.22")
+    api("net.peanuuutz:tomlkt:0.2.0")
 
     implementation("io.github.microutils:kotlin-logging-jvm:3.0.5")
     implementation("org.slf4j:slf4j-api:2.0.7")
 
-    testImplementation("ch.qos.logback:logback-classic:1.4.6")
-    testImplementation("org.jetbrains.kotlin:kotlin-test:1.8.20")
+    testImplementation("ch.qos.logback:logback-classic:1.4.11")
+    testImplementation("org.jetbrains.kotlin:kotlin-test:1.8.22")
 }
 
 tasks {
@@ -92,7 +92,7 @@ publishing {
 
             pom {
                 name.set(project.base.archivesName.get())
-                description.set("a tiny TOML config library used for minecraft mod dev")
+                description.set("A tiny TOML config library used for Minecraft modding development")
 
                 licenses {
                     license {
@@ -109,7 +109,7 @@ publishing {
             url = uri("https://repo.repsy.io/mvn/amibeskyfy16/repo")
             credentials {
                 val properties = Properties()
-                properties.load(file("E:\\repsy.properties").inputStream())
+                properties.load(file("D:\\Tech\\Resources\\Repsy\\repsy.properties").inputStream())
                 username = "${properties["USERNAME"]}"
                 password = "${properties["PASSWORD"]}"
             }
